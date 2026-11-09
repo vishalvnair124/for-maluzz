@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heart Made by Malu | Handmade with Love ♡</title>
+<meta name="description" content="Handmade pipe cleaner flower bouquets and customised gifts & surprises. DM to order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff5f7;--card:#fff;--rose:#e0507a;--rose-d:#b8325a;--blush:#fde1e9;--ink:#4a2433;--mute:#8a6674;--line:#f6cfdb;--r:24px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.15}
+.script{font-family:'Dancing Script',cursive;font-weight:700}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 26px;border-radius:999px;border:0;font:600 15px 'Plus Jakarta Sans',sans-serif;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s}
+.btn-p{background:var(--rose);color:#fff;box-shadow:0 10px 24px -8px rgba(224,80,122,.6)}
+.btn-p:hover{background:var(--rose-d);transform:translateY(-2px)}
+.btn-g{background:#fff;color:var(--rose-d);border:1px solid var(--line)}
+.btn-g:hover{background:var(--blush);transform:translateY(-2px)}
+.btn:disabled{opacity:.6;cursor:wait}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,245,247,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-size:26px;color:var(--rose-d)}
+.links{display:flex;gap:28px;font-size:14px;font-weight:500;color:var(--mute)}
+.links a:hover{color:var(--rose)}
+.nav .btn{padding:10px 20px;font-size:14px}
+@media(max-width:720px){.links{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:88vh;display:grid;place-items:center;text-align:center;padding:70px 0 50px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;z-index:0;animation:drift 14s ease-in-out infinite}
+.b1{width:340px;height:340px;background:#ffc2d4;top:-60px;left:-80px}
+.b2{width:300px;height:300px;background:#ffd9b8;bottom:-40px;right:-60px;animation-delay:-6s}
+@keyframes drift{50%{transform:translate(40px,30px) scale(1.12)}}
+.hero .wrap{position:relative;z-index:1}
+.pill{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--rose-d);padding:6px 16px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:22px}
+.hero h1{font-size:clamp(40px,8vw,84px);font-weight:700;margin-bottom:6px}
+.hero .script{display:block;font-size:clamp(34px,6vw,60px);color:var(--rose);margin-bottom:20px}
+.hero p{max-width:520px;margin:0 auto 30px;color:var(--mute);font-size:17px}
+.cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.float{position:absolute;font-size:30px;opacity:.7;animation:bob 5s ease-in-out infinite;z-index:1}
+@keyframes bob{50%{transform:translateY(-16px) rotate(8deg)}}
+
+/* ticker */
+.ticker{overflow:hidden;padding:18px 0;background:#fff;border-block:1px solid var(--line)}
+.ticker+.ticker{border-top:0;background:var(--blush)}
+.track{display:flex;gap:16px;width:max-content;will-change:transform}
+.chip{display:flex;align-items:center;gap:10px;padding:10px 22px;border-radius:999px;background:var(--bg);border:1px solid var(--line);font-family:'Playfair Display',serif;font-size:18px;white-space:nowrap}
+.ticker+.ticker .chip{background:#fff}
+
+/* spiral */
+.spiral{height:420vh;position:relative}
+.stick{position:sticky;top:0;height:100vh;overflow:hidden;display:grid;place-items:center;perspective:1300px}
+.sp-head{position:absolute;top:84px;left:0;right:0;text-align:center;z-index:5;padding:0 20px;pointer-events:none}
+.sp-head h2{font-size:clamp(28px,5vw,46px)}
+.sp-head p{color:var(--mute);font-size:14px;margin-top:6px}
+.space{position:relative;width:260px;height:340px;transform-style:preserve-3d;margin-top:70px}
+.arm{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform,opacity}
+.arm .card{width:100%;height:100%;background:var(--card);border-radius:var(--r);padding:12px;border:1px solid var(--line);box-shadow:0 24px 50px -18px rgba(120,40,70,.35);display:flex;flex-direction:column;transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+.arm:hover .card{transform:translateY(-12px) scale(1.06);box-shadow:0 34px 60px -16px rgba(224,80,122,.5)}
+.card .ph{position:relative;flex:1;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,var(--blush),#ffe9d6)}
+.card .ph img.real{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.arm:hover .ph img.real{transform:scale(1.08)}
+.card h3{font-size:18px;margin:12px 4px 2px}
+.card p{font-size:12.5px;color:var(--mute);margin:0 4px 10px}
+.card .btn{padding:9px;font-size:13px}
+
+/* sections */
+section.pad{padding:90px 0}
+.title{text-align:center;margin-bottom:46px}
+.title small{color:var(--rose);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+.title h2{font-size:clamp(28px,4.5vw,42px);margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:24px}
+.feat{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px;transition:transform .35s,box-shadow .35s}
+.feat:hover{transform:translateY(-8px);box-shadow:0 26px 44px -22px rgba(224,80,122,.45)}
+.feat .ic{width:56px;height:56px;border-radius:18px;background:var(--blush);display:grid;place-items:center;font-size:26px;margin-bottom:18px}
+.feat h3{font-size:21px;margin-bottom:8px}
+.feat p{color:var(--mute);font-size:15px}
+.about{background:linear-gradient(180deg,transparent,var(--blush),transparent);text-align:center}
+.about p{max-width:600px;margin:0 auto 24px;color:var(--mute);font-size:17px}
+.tags{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.tags span{background:#fff;border:1px solid var(--line);padding:8px 18px;border-radius:999px;font-size:14px;font-weight:600;color:var(--rose-d)}
+
+/* form */
+.formbox{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:32px;padding:clamp(24px,5vw,46px);box-shadow:0 30px 60px -30px rgba(224,80,122,.4)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:600px){.row{grid-template-columns:1fr}}
+label{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin:16px 0 6px}
+input,select,textarea{width:100%;padding:13px 16px;border-radius:14px;border:1.5px solid var(--line);background:#fffafb;font:15px 'Plus Jakarta Sans',sans-serif;color:var(--ink);transition:border .2s,box-shadow .2s}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--rose);box-shadow:0 0 0 4px rgba(224,80,122,.12)}
+textarea{resize:vertical;min-height:100px}
+.formbox .btn{width:100%;margin-top:22px;padding:15px}
+.msg{display:none;margin-top:16px;padding:14px;border-radius:14px;text-align:center;font-size:14px}
+.msg.ok{display:block;background:#eaf8ef;color:#216a3a}
+.msg.err{display:block;background:#fdecec;color:#9b2c2c}
+.hp{position:absolute;left:-9999px}
+
+footer{background:#fff;border-top:1px solid var(--line);padding:36px 0;text-align:center;color:var(--mute);font-size:14px}
+footer .logo{display:block;margin-bottom:6px}
+footer a{color:var(--rose-d);font-weight:600}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo script">Heart Made by Malu</a>
+    <nav class="links"><a href="#top">Home</a><a href="#gallery">Gallery</a><a href="#offer">Creations</a><a href="#about">About</a></nav>
+    <a href="#order" class="btn btn-p">DM to Order ♡</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <span class="float" style="top:18%;left:8%">🌸</span>
+  <span class="float" style="top:30%;right:9%;animation-delay:-1.5s">🎀</span>
+  <span class="float" style="bottom:18%;left:14%;animation-delay:-3s">🌷</span>
+  <span class="float" style="bottom:26%;right:14%;animation-delay:-2s">♡</span>
+  <div class="wrap">
+    <span class="pill rv">🎀 Handmade with Love ♡</span>
+    <h1 class="rv d1">Heart Made by Malu<span class="script">flowers that never fade</span></h1>
+    <p class="rv d2">Handcrafted pipe cleaner flower bouquets and personalised surprise gifts, made to make someone's day.</p>
+    <div class="cta rv d2">
+      <a href="#order" class="btn btn-p">Place an Enquiry</a>
+      <a href="https://www.instagram.com/heart_made_by_malu_/" target="_blank" rel="noopener" class="btn btn-g">@heart_made_by_malu_</a>
+    </div>
+  </div>
+</section>
+
+<!-- scroll-driven tickers -->
+<div class="ticker"><div class="track" data-dir="1"></div></div>
+<div class="ticker"><div class="track" data-dir="-1"></div></div>
+
+<!-- spiral gallery -->
+<section class="spiral" id="gallery">
+  <div class="stick">
+    <div class="sp-head"><h2>Our Handmade Gallery</h2><p>Keep scrolling and watch the collection unfold ↓</p></div>
+    <div class="space" id="space">
+      <div class="arm"><div class="card"><div class="ph"><img class="real" src="https://i.etsystatic.com/57046051/r/il/39e793/7172190435/il_fullxfull.7172190435_hfue.jpg" alt="Classic Rose Bouquet" loading="lazy"></div><h3>Classic Rose Bouquet</h3><p>Hand-twisted everlasting roses.</p><a href="#order" data-item="Pipe Cleaner Flower Bouquet" class="btn btn-p">Order</a></div></div>
+      <div class="arm"><div class="card"><div class="ph"><img class="real" src="https://i.etsystatic.com/66418955/r/il/ef4349/8165618933/il_570xN.8165618933_eklq.jpg" alt="Surprise Hampers" loading="lazy"></div><h3>Surprise Hampers</h3><p>Curated with personal notes.</p><a href="#order" data-item="Customised Gift & Surprise" class="btn btn-p">Order</a></div></div>
+      <div class="arm"><div class="card"><div class="ph"><img class="real" src="https://i.etsystatic.com/57046051/r/il/d57c37/7078928270/il_fullxfull.7078928270_mnwt.jpg" alt="Pastel Tulips" loading="lazy"></div><h3>Pastel Tulips</h3><p>Soft tones, forever fresh.</p><a href="#order" data-item="Pipe Cleaner Flower Bouquet" class="btn btn-p">Order</a></div></div>
+      <div class="arm"><div class="card"><div class="ph"><img class="real" src="https://www.mystore.in/s/62ea2c599d1398fa16dbae0a/g/69d375912ed65db1661eef64/pipe-cleaner-sunflower-in-terracotta-pot-420x420.png" alt="Sunshine Sunflowers" loading="lazy"></div><h3>Sunshine Sunflowers</h3><p>Bright, cheerful and handmade.</p><a href="#order" data-item="Pipe Cleaner Flower Bouquet" class="btn btn-p">Order</a></div></div>
+      <div class="arm"><div class="card"><div class="ph"><img class="real" src="https://i.etsystatic.com/57046051/r/il/39e793/7172190435/il_fullxfull.7172190435_hfue.jpg" alt="Birthday & Anniversary" loading="lazy"></div><h3>Birthday & Anniversary</h3><p>Boxes made for your loved ones.</p><a href="#order" data-item="Customised Gift & Surprise" class="btn btn-p">Order</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="offer">
+  <div class="wrap">
+    <div class="title rv"><small>What we make</small><h2>Made for your special moments</h2></div>
+    <div class="grid">
+      <div class="feat rv"><div class="ic">🌸</div><h3>Pipe Cleaner Bouquets</h3><p>Roses, tulips, sunflowers and more in your favourite colours. Gift wrapped, with a handwritten note if you like.</p></div>
+      <div class="feat rv d1"><div class="ic">🎁</div><h3>Customised Gifts & Surprises</h3><p>Surprise boxes and hampers built around the person you're gifting: messages, polaroids and little treats.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad about" id="about">
+  <div class="wrap rv">
+    <h2 style="font-size:clamp(28px,4.5vw,42px);margin-bottom:16px">Crafting smiles, one piece at a time</h2>
+    <p>Every bouquet is twisted by hand and every gift is put together with care, because the best gifts feel personal.</p>
+    <div class="tags"><span>100% Handcrafted</span><span>Custom Designs</span><span>Made with Love ♡</span></div>
+  </div>
+</section>
+
+<section class="pad" id="order">
+  <div class="wrap">
+    <div class="title rv"><small>DM to order</small><h2>Send an enquiry</h2></div>
+    <div class="formbox rv">
+      <form id="form" novalidate>
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+        <div class="row">
+          <div><label for="name">Your name</label><input id="name" name="name" required placeholder="Full name" autocomplete="name"></div>
+          <div><label for="phone">Phone / WhatsApp</label><input id="phone" name="phone" type="tel" required placeholder="+91 XXXXX XXXXX" autocomplete="tel"></div>
+        </div>
+        <div class="row">
+          <div><label for="item">What would you like?</label>
+            <select id="item" name="item">
+              <option>Pipe Cleaner Flower Bouquet</option>
+              <option>Customised Gift & Surprise</option>
+              <option>Other / Special Request</option>
+            </select></div>
+          <div><label for="city">City / Delivery address</label><input id="city" name="address" required placeholder="City or address"></div>
+        </div>
+        <label for="note">Colours, theme, budget, date</label>
+        <textarea id="note" name="message" placeholder="Tell Malu what you have in mind..."></textarea>
+        <button class="btn btn-p" id="send" type="submit">Send Enquiry ♡</button>
+        <div class="msg" id="msg" role="status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="logo script" style="font-size:24px">Heart Made by Malu</span>
+    Handmade with Love ♡ · <a href="https://www.instagram.com/heart_made_by_malu_/" target="_blank" rel="noopener">@heart_made_by_malu_</a>
+    <p style="font-size:12px;margin-top:10px">© 2026 Heart Made by Malu</p>
+  </div>
+</footer>
+
+<script>
+/* ===== SETTINGS: paste your free key from web3forms.com (enter Malu's email there) ===== */
+const WEB3FORMS_KEY = "PASTE_YOUR_ACCESS_KEY_HERE";
+
+const $ = (s, c = document) => c.querySelector(s), $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* scroll reveal */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15 });
+$$('.rv').forEach(el => io.observe(el));
+
+/* pre-select item from cards */
+$$('[data-item]').forEach(a => a.addEventListener('click', () => { $('#item').value = a.dataset.item; }));
+
+/* ===== scroll-driven ticker (moves only when you scroll) ===== */
+const rows = [
+  ['🌸 Pipe Cleaner Bouquets','🎁 Surprise Hampers','✨ Everlasting Blooms','💌 DM to Order','🎀 Handmade with Love'],
+  ['🌷 Custom Colours','📸 Polaroid Keepsakes','🌻 Sunflower Bouquets','♡ Made for You','🎂 Birthdays & Anniversaries']
+];
+const tracks = $$('.track').map((t, i) => {
+  const html = rows[i].map(x => `<span class="chip">${x}</span>`).join('');
+  t.innerHTML = html + html + html + html;
+  return { el: t, dir: +t.dataset.dir, x: 0, half: 0 };
+});
+const measure = () => tracks.forEach(t => t.half = t.el.scrollWidth / 4);
+measure(); addEventListener('resize', measure); addEventListener('load', measure);
+let lastY = scrollY, target = 0, cur = 0;
+addEventListener('scroll', () => { target += (scrollY - lastY) * 1.1; lastY = scrollY; }, { passive: true });
+
+/* ===== 3D spiral scroll gallery ===== */
+const sec = $('#gallery'), arms = $$('.arm', sec), N = arms.length;
+function spiral() {
+  const p = Math.min(1, Math.max(0, -sec.getBoundingClientRect().top / (sec.offsetHeight - innerHeight)));
+  const mob = innerWidth < 720, R = mob ? 170 : 400, rise = mob ? 60 : 90;
+  arms.forEach((a, i) => {
+    const ang = (i / N) * Math.PI * 2 + p * Math.PI * 2 * 1.5;  // spiral turn
+    const s = Math.sin(ang), c = Math.cos(ang);
+    const x = s * R, z = c * R - R * .6;
+    const y = Math.sin(ang * .5 + i) * rise * .6 + (i - (N - 1) / 2) * 6;
+    const depth = (c + 1) / 2;                                  // 1 = front
+    a.style.transform = `translate3d(${x}px,${y}px,${z}px) rotateY(${-s * 28}deg) scale(${.72 + depth * .38})`;
+    a.style.opacity = (.25 + depth * .75).toFixed(2);
+    a.style.zIndex = Math.round(depth * 100);
+    a.style.filter = depth < .4 ? `blur(${((.4 - depth) * 4).toFixed(1)}px)` : 'none';
+    a.style.pointerEvents = depth > .55 ? 'auto' : 'none';
+  });
+}
+
+/* single smooth animation loop */
+function loop() {
+  cur += (target - cur) * .08;
+  tracks.forEach(t => {
+    if (!t.half) return;
+    let x = (cur * t.dir) % t.half;
+    if (x > 0) x -= t.half;
+    t.el.style.transform = `translate3d(${x}px,0,0)`;
+  });
+  requestAnimationFrame(loop);
+}
+if (!reduce) loop();
+addEventListener('scroll', () => requestAnimationFrame(spiral), { passive: true });
+addEventListener('resize', spiral); spiral();
+
+/* ===== enquiry form (free backend via Web3Forms -> emails Malu) ===== */
+const form = $('#form'), btn = $('#send'), msg = $('#msg');
+const show = (t, c) => { msg.className = 'msg ' + c; msg.textContent = t; };
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+  if (WEB3FORMS_KEY.startsWith('PASTE')) { show('Form not connected yet. Add the Web3Forms access key in the code.', 'err'); return; }
+  btn.disabled = true; btn.textContent = 'Sending...';
+  const data = Object.fromEntries(new FormData(form));
+  data.access_key = WEB3FORMS_KEY;
+  data.subject = 'New enquiry: ' + data.item;
+  data.from_name = 'Heart Made by Malu Website';
+  try {
+    const r = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
+    const j = await r.json();
+    if (!j.success) throw 0;
+    form.reset(); show('Thank you! Malu received your enquiry and will contact you soon ♡', 'ok');
+  } catch { show('Something went wrong. Please DM @heart_made_by_malu_ on Instagram instead.', 'err'); }
+  btn.disabled = false; btn.textContent = 'Send Enquiry ♡';
+});
+</script>
+</body>
+</html>
