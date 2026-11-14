@@ -213,8 +213,8 @@ section.pad{padding:90px 0}
 </footer>
 
 <script>
-/* ===== SETTINGS: configured with Web3Forms Key ===== */
-const WEB3FORMS_KEY = "AKfycbziFI_6d7scjdDJL-NlqGz4CYBwY2dFB3J-LMig-ws9DEIBFhAhXeEpWkTCJzLaOtbn";
+/* ===== SETTINGS: Google Apps Script Web App URL (saves to Google Sheet) ===== */
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbziFI_6d7scjdDJL-NlqGz4CYBwY2dFB3J-LMig-ws9DEIBFhAhXeEpWkTCJzLaOtbn/exec";
 
 const $ = (s, c = document) => c.querySelector(s), $$ = (s, c = document) => [...c.querySelectorAll(s)];
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -275,22 +275,24 @@ if (!reduce) loop();
 addEventListener('scroll', () => requestAnimationFrame(spiral), { passive: true });
 addEventListener('resize', spiral); spiral();
 
-/* ===== enquiry form (free backend via Web3Forms -> emails Malu) ===== */
+/* ===== enquiry form (posts to Google Apps Script -> Google Sheet) ===== */
 const form = $('#form'), btn = $('#send'), msg = $('#msg');
 const show = (t, c) => { msg.className = 'msg ' + c; msg.textContent = t; };
 form.addEventListener('submit', async e => {
   e.preventDefault();
   if (!form.checkValidity()) { form.reportValidity(); return; }
-  if (WEB3FORMS_KEY.startsWith('PASTE')) { show('Form not connected yet. Add the Web3Forms access key in the code.', 'err'); return; }
+  if (form.botcheck.checked) return; // spam honeypot
   btn.disabled = true; btn.textContent = 'Sending...';
-  const data = Object.fromEntries(new FormData(form));
-  data.access_key = WEB3FORMS_KEY;
-  data.subject = 'New enquiry: ' + data.item;
-  data.from_name = 'Heart Made by Malu Website';
+  const body = new URLSearchParams({
+    name: form.name.value.trim(),
+    phone: form.phone.value.trim(),
+    item: form.item.value,
+    address: form.address.value.trim(),
+    message: form.message.value.trim()
+  });
   try {
-    const r = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
-    const j = await r.json();
-    if (!j.success) throw 0;
+    // no-cors: Apps Script doesn't send CORS headers, so the reply is opaque; the request still reaches the sheet
+    await fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body });
     form.reset(); show('Thank you! Malu received your enquiry and will contact you soon ♡', 'ok');
   } catch { show('Something went wrong. Please DM @heart_made_by_malu_ on Instagram instead.', 'err'); }
   btn.disabled = false; btn.textContent = 'Send Enquiry ♡';
